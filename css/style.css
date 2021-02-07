@@ -1,0 +1,29 @@
+#body-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 0 auto;
+}
+
+.style-meal img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.style-meal {
+  border-radius: 15px;
+  border: 1px solid gray;
+  box-shadow: 10px 10px 40px gray;
+  width: 80%;
+  text-align: center;
+  padding: 10px;
+}
+
+#submit-area {
+  text-align: center;
+  margin: 30px;
+}
+#body-content {
+  width: 80%;
+  margin: 0 auto;
+}
