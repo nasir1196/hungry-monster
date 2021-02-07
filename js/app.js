@@ -41,15 +41,22 @@ bodyContent.addEventListener('click', function (event) {
 
     function DetailInfo(detailData) {
         getDetail.innerHTML += `
-        <h1>${detailData.strMeal}</h1>
-        <img src = "${detailData.strMealThumb}">
-        <p>1:${detailData.strMeasure1}</p>
-        <p>2: ${detailData.strMeasure2}</p>
-        <p>3: ${detailData.strMeasure3}</p>
-        <p>4: ${detailData.strMeasure4}</p>
-        <p>5: ${detailData.strMeasure5}</p>
-        <p>6: ${detailData.strMeasure6}</p>
-        <p>7: ${detailData.strMeasure7}</p>
+        <h1>Food Name: ${detailData.strMeal}</h1>
+        <img id="detail-img" src = "${detailData.strMealThumb}">
+        <p>Place: ${detailData.strArea}</p>
+        <p>Category: ${detailData.strCategory}</p>
+        <p>1: ${detailData.strIngredient1}</p>
+        <p>2: ${detailData.strIngredient2}</p>
+        <p>3: ${detailData.strIngredient3}</p>
+        <p>4: ${detailData.strIngredient4}</p>
+        <p>5: ${detailData.strIngredient5}</p>
+        <p>6: ${detailData.strIngredient6}</p>
+        <p>7: ${detailData.strIngredient7}</p>
+        <p>8: ${detailData.strIngredient8}</p>
+        <p>9: ${detailData.strIngredient9}</p>
+        <p>10: ${detailData.strIngredient10}</p>
+        <p>11: ${detailData.strIngredient11}</p>
+        
         `
     }
 })
