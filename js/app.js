@@ -36,7 +36,7 @@ bodyContent.addEventListener('click', function (event) {
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
         fetch(url)
             .then(res => res.json())
-            .then(data => DetailInfo(data));
+            .then(data => DetailInfo(data.meals[0]));
     }
 
     function DetailInfo(detailData) {
