@@ -28,24 +28,29 @@ function dataShow(data) {
     });
 }
 
-const displayFoodDetail = name => {
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
-    fetch(url)
-        .then(res => res.json())
-        .then(data => DetailInfo(data));
-}
+bodyContent.addEventListener('click', function (event) {
+    const getDetail = document.getElementById('get-detail')
+    const getId = event.target.innerText;
+    displayFoodDetail(getId)
+    function displayFoodDetail(name) {
+        const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => DetailInfo(data));
+    }
 
-function DetailInfo(detailData) {
-    const detailDiv = document.getElementById('get-detail');
-    detailDiv.innerHTML = `
-    <h1>${detailData.strMeal}</h1>
-    <img src = "${detailData.strMealThumb}">
-    <p>1:${detailData.strMeasure1}</p>
-    <p>2: ${detailData.strMeasure2}</p>
-    <p>3: ${detailData.strMeasure3}</p>
-    <p>4: ${detailData.strMeasure4}</p>
-    <p>5: ${detailData.strMeasure5}</p>
-    <p>6: ${detailData.strMeasure6}</p>
-    <p>7: ${detailData.strMeasure7}</p>
-    `
-}
+    function DetailInfo(detailData) {
+        getDetail.innerHTML += `
+        <h1>${detailData.strMeal}</h1>
+        <img src = "${detailData.strMealThumb}">
+        <p>1:${detailData.strMeasure1}</p>
+        <p>2: ${detailData.strMeasure2}</p>
+        <p>3: ${detailData.strMeasure3}</p>
+        <p>4: ${detailData.strMeasure4}</p>
+        <p>5: ${detailData.strMeasure5}</p>
+        <p>6: ${detailData.strMeasure6}</p>
+        <p>7: ${detailData.strMeasure7}</p>
+        `
+    }
+})
+
