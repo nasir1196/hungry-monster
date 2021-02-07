@@ -1,26 +1,31 @@
-function clickHandler() {
+// create handler for search food 
+const clickHandler = () => {
     const input = document.getElementById('input').value;
-    loadData(input);
+    loadFoodItemData(input);
 }
 
-function loadData(inputValue) {
+
+// create function  for get handler value 
+const loadFoodItemData = (inputValue) => {
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
         .then(promise => promise.json())
-        .then(data => dataShow(data.meals));
+        .then(data => showFoodItemData(data.meals));
 
 }
 
+
+// create function for show all body content images and title 
 const bodyContent = document.getElementById('body-content');
-function dataShow(data) {
-    data.forEach(mealItem => {
+const showFoodItemData = (data) => {
+    data.forEach(ItemList => {
         const div = document.createElement('div');
         div.className = 'style-meal'
         const img = document.createElement('img');
-        img.src = `${mealItem.strMealThumb}`;
+        img.src = `${ItemList.strMealThumb}`;
         div.appendChild(img);
         const h4 = document.createElement('h4');
         h4.className = "style-name";
-        h4.innerText = mealItem.strMeal;
+        h4.innerText = ItemList.strMeal;
         div.appendChild(h4);
         bodyContent.appendChild(div)
 
@@ -28,18 +33,22 @@ function dataShow(data) {
     });
 }
 
+
+// create click handler for see details 
 bodyContent.addEventListener('click', function (event) {
     const getDetail = document.getElementById('get-detail')
     const getId = event.target.innerText;
     displayFoodDetail(getId)
-    function displayFoodDetail(name) {
+    const displayFoodDetail = (name) => {
         const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`
         fetch(url)
             .then(res => res.json())
             .then(data => DetailInfo(data.meals[0]));
     }
 
-    function DetailInfo(detailData) {
+
+    // create function for show food elements
+    const DetailInfo = (detailData) => {
         getDetail.innerHTML += `
         <img id="detail-img" src = "${detailData.strMealThumb}">
         <h1>Food Name: ${detailData.strMeal}</h1>
@@ -62,3 +71,4 @@ bodyContent.addEventListener('click', function (event) {
     }
 })
 
+// closing all script tag 
