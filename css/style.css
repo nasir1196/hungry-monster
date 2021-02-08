@@ -6,14 +6,18 @@
   font-weight: bold;
   color: seagreen;
 }
+#search-button:hover{
+  background-color: teal;
+  color: bisque;
+}
 #input {
   border: none;
   padding: 5px 20px;
   border-radius: 8px 0 0 8px;
   font-size: 25px;
   font-weight: bold;
-  color: seagreen;
-  background-color: skyblue;
+  color: #ffffff;
+  background-color: rgb(108, 150, 240);
 }
 
 #body-content {
