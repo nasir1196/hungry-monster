@@ -21,9 +21,10 @@ const loadFoodItemData = async (inputValue) => {
 
 
 // create function for show all body content images and title 
-const bodyContent = document.getElementById('body-content');
-bodyContent.innerHTML = '';
+
 const showFoodItemData = (data) => {
+    const bodyContent = document.getElementById('body-content');
+    bodyContent.innerHTML = '';
     data.forEach(mealList => {
         const hungryDiv = document.createElement('div');
         hungryDiv.className = "single-result row align-items-center my-3 p-3";
@@ -56,9 +57,9 @@ const displayFoodDetail = async (foodData) => {
 
 
 // creat function for show food details 
-const getDetail = document.getElementById('get-detail')
-getDetail.innerHTML = "";
 const showFoodDetails = (foodName) => {
+    const getDetail = document.getElementById('get-detail')
+    getDetail.innerHTML = '';
     const foodDetail = document.createElement('div');
     foodDetail.className = 'food-detail';
     foodDetail.innerHTML = `
