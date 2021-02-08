@@ -15,8 +15,9 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
+                <img src="./icon/monster.jpg" alt="" class="logo">
                 <a class="navbar-brand" href="#">Hungry Monster</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,13 +26,16 @@
                 <div class="collapse navbar-collapse " id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Features</a>
+                            <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="#">Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
                         </li>
                     </ul>
                 </div>
@@ -45,7 +49,7 @@
     <main>
         <section>
             <div id="submit-area">
-                <h2 class="text-warning">Search Your Food 🥩</h2>
+                <h2 class="text-warning p-3">Search Your Food 🥩</h2>
                 <input id="input" type="text" name=""><span><button onclick="clickHandler()"
                         id="search-button">Search</button></span>
 

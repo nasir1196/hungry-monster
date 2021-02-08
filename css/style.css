@@ -6,6 +6,9 @@
   font-weight: bold;
   color: seagreen;
 }
+.logo{
+  width: 6%;
+}
 #search-button:hover{
   background-color: teal;
   color: bisque;
@@ -17,7 +20,7 @@
   font-size: 25px;
   font-weight: bold;
   color: #ffffff;
-  background-color: rgb(108, 150, 240);
+  background-color: #6c96f0;
 }
 
 #body-content {
@@ -29,11 +32,11 @@
   text-align: center;
 }
 .hungry-image {
-  box-shadow: 10px 10px 30px rgb(228, 231, 231);
+  box-shadow: 10px 10px 30px #e4e7e7;
   width: 70%;
   border-radius: 10px;
   cursor: pointer;
-  background-color: rgb(241, 227, 227);
+  background-color: #f1e3e3;
 }
 .hungry-image h2 {
   padding: 10px;
