@@ -27,10 +27,10 @@ const showFoodItemData = (data) => {
     bodyContent.innerHTML = '';
     data.forEach(mealList => {
         const hungryDiv = document.createElement('div');
-        hungryDiv.className = "single-result row align-items-center my-3 p-3";
+        hungryDiv.className = " row align-items-center";
         hungryDiv.innerHTML = `
         <div onclick="displayFoodDetail('${mealList.strMeal}');" >
-            <div class="col-md-4 hungry-image">
+            <div class="hungry-image">
                 <img src="${mealList.strMealThumb}" alt="">
             </div>
             <h2>${mealList.strMeal}</h2>
