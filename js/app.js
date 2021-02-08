@@ -1,5 +1,9 @@
 // create handler for search food 
 const clickHandler = () => {
+    const getError = document.getElementById('display-error');
+    getError.innerText = '';
+    const getDetail = document.getElementById('get-detail')
+    getDetail.innerHTML = '';
     const input = document.getElementById('input').value;
     loadFoodItemData(input);
 }
@@ -92,6 +96,8 @@ const getError = (error) => {
     const getError = document.getElementById('display-error');
     getError.innerText = '';
     getError.innerText = error;
+    // const emptyBody = document.getElementById('empty-body');
+    // emptyBody.innerHTML = '';
 }
 
 // closing all script file 
