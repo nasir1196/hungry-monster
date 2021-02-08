@@ -27,14 +27,12 @@ const showFoodItemData = (data) => {
     bodyContent.innerHTML = '';
     data.forEach(mealList => {
         const hungryDiv = document.createElement('div');
-        hungryDiv.className = " row align-items-center";
+        hungryDiv.className = " meal-list";
         hungryDiv.innerHTML = `
-        <div onclick="displayFoodDetail('${mealList.strMeal}');" >
-            <div class="hungry-image">
+            <div onclick="displayFoodDetail('${mealList.strMeal}');" class="hungry-image">
                 <img src="${mealList.strMealThumb}" alt="">
+                <h2>${mealList.strMeal}</h2>
             </div>
-            <h2>${mealList.strMeal}</h2>
-        </div>
         `;
         bodyContent.appendChild(hungryDiv);
     });
@@ -63,22 +61,24 @@ const showFoodDetails = (foodName) => {
     const foodDetail = document.createElement('div');
     foodDetail.className = 'food-detail';
     foodDetail.innerHTML = `
-        <img src="${foodName.strMealThumb}" alt="">
-        <h1>${foodName.strMeal}</h1>
-        <h3>Ingredients:</h3>
-        <ul >
-            <li>${foodName.strIngredient1}</li> 
-            <li>${foodName.strIngredient2}</li> 
-            <li>${foodName.strIngredient3}</li> 
-            <li>${foodName.strIngredient4}</li> 
-            <li>${foodName.strIngredient5}</li> 
-            <li>${foodName.strIngredient6}</li> 
-            <li>${foodName.strIngredient7}</li> 
-            <li>${foodName.strIngredient8}</li> 
-            <li>${foodName.strIngredient9}</li> 
-            <li>${foodName.strIngredient10}</li> 
-            <li>${foodName.strIngredient11}</li>
-        </ul> 
+        <div class="food-detail">
+            <img src="${foodName.strMealThumb}" alt="">
+            <h1>${foodName.strMeal}</h1>
+            <h3>Ingredients:</h3>
+            <ul class="ingredient">
+                <li>${foodName.strIngredient1}</li> 
+                <li>${foodName.strIngredient2}</li> 
+                <li>${foodName.strIngredient3}</li> 
+                <li>${foodName.strIngredient4}</li> 
+                <li>${foodName.strIngredient5}</li> 
+                <li>${foodName.strIngredient6}</li> 
+                <li>${foodName.strIngredient7}</li> 
+                <li>${foodName.strIngredient8}</li> 
+                <li>${foodName.strIngredient9}</li> 
+                <li>${foodName.strIngredient10}</li> 
+                <li>${foodName.strIngredient11}</li>
+            </ul> 
+        </div>    
         `;
     getDetail.appendChild(foodDetail);
 

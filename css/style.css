@@ -1,11 +1,22 @@
 #body-content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
+  text-align: center;
+  
 }
-
+.hungry-image{
+  box-shadow: 10px 10px 30px cyan;
+  width: 70%;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+}
+.hungry-image h2{
+  padding: 10px;
+}
 .hungry-image img {
   width: 100%;
   border-radius: 10px;
@@ -15,4 +26,15 @@
   text-align: center;
   margin: 30px;
 }
-
+.ingredient {
+  list-style: none;
+  font-weight: bold;
+}
+.food-detail{
+  width: 50%;
+  margin: 0 auto;
+}
+.food-detail img{
+  width: 100%;
+  border-radius: 12px;
+}
