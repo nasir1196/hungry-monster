@@ -6,13 +6,16 @@
   font-weight: bold;
   color: seagreen;
 }
+
 .logo{
   width: 6%;
 }
+
 #search-button:hover{
   background-color: teal;
   color: bisque;
 }
+
 #input {
   border: none;
   padding: 5px 20px;
@@ -31,6 +34,7 @@
   width: 90%;
   text-align: center;
 }
+
 .hungry-image {
   box-shadow: 10px 10px 30px #e4e7e7;
   width: 70%;
@@ -38,9 +42,11 @@
   cursor: pointer;
   background-color: #f1e3e3;
 }
+
 .hungry-image h2 {
   padding: 10px;
 }
+
 .hungry-image img {
   width: 100%;
   border-radius: 10px;
@@ -50,15 +56,20 @@
   text-align: center;
   margin: 30px;
 }
+
 .ingredient {
   list-style: none;
   font-weight: bold;
 }
+
 .food-detail {
   width: 50%;
   margin: 0 auto;
 }
+
 .food-detail img {
   width: 100%;
   border-radius: 12px;
 }
+
+/* closing all css here */

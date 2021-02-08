@@ -20,7 +20,6 @@ const loadFoodItemData = async (inputValue) => {
     catch (error) {
         getError("We can't find your items!!! Sorry Try Again Later!");
     }
-
 }
 
 
@@ -85,9 +84,6 @@ const showFoodDetails = (foodName) => {
         </div>    
         `;
     getDetail.appendChild(foodDetail);
-
-
-
 }
 
 
@@ -99,5 +95,6 @@ const getError = (error) => {
     // const emptyBody = document.getElementById('empty-body');
     // emptyBody.innerHTML = '';
 }
+
 
 // closing all script file 
